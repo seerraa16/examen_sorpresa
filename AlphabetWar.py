@@ -8,4 +8,9 @@ def alphabet_war(fight):
             left_score += left_side[i]
         elif i in right_side:
             right_score += right_side[i]
-    
+    if left_score > right_score:
+        return "Left side wins!"
+    elif left_score < right_score:
+        return "Right side wins!"
+    else:
+        return "Let's fight again!"
