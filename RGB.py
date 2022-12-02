@@ -12,3 +12,4 @@ def rgb(r, g, b):
         b = 0
     elif b > 255:
         b = 255
+    return "{:02X}{:02X}{:02X}".format(r, g, b)
