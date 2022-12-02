@@ -8,4 +8,8 @@ def next_bigger(n):
     if i == 0:
         return -1      
     temp, pos = len(s) - 1, s[i-1]
-    
+    while pos >= s[temp]:
+        temp -= 1
+    s[temp], s[i-1] = s[i-1], s[temp]
+    s[i:] = s[:i-1:-1]
+    return int(''.join(s))
